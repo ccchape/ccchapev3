@@ -1,15 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt_BR">
   <head>
-    <title>Ccchapev3</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <meta charset="utf-8">
+        <title>Liga Chapecoense de Programação</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,800" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <body>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" title="Liga Chapecoense de Programação">
+          <%= image_tag "logo.png", style: "max-width: 30px;" %>
+        </a>
 
-  <body>
-    <%= yield %>
-  </body>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                  Como participar?
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                  Categoria Prodígio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                  Categoria Júnior
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                  Categoria Sênior
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                  Formulário de Inscrição
+              </a>
+            </li>
+          </div>
+      </nav>
+
+          <main role="main">
+                <%= yield %>
+          </main>
+
+        <!-- Footer -->
+        <footer class="container">
+          <p><a href="https://ccchape.github.io/"> @ccchape </a>
+            <br />
+          <a href="mailto:emilio.wuerges@uffs.edu.br?subject=Clube de Programação">emilio.wuerges@uffs.edu.br</a></p>
+        </footer>
+    </body>
 </html>
