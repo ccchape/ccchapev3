@@ -1,2 +1,31 @@
-<h1>Category#senior</h1>
-<p>Find me in app/views/category/senior.html.erb</p>
+<div class="container">
+  <header class="post-header">
+    <h1 class="post-title">Ranking da categoria Sênior</h1>
+  </header>
+
+  <div class="post-content">
+    <p>A categoria sênior reúne os competidores mais experientes da região.</p>
+
+    <div class="table-responsive">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Handle do Codeforces</th>
+          <th style="text-align: right">Rating do Codeforces</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% User.senior.each do |user| %>
+          <tr>
+            <td> <%= user.name %> </td>
+            <td> <%= user.handle %> </td>
+            <td style="text-align: right">  <%= user.rating %> </td>
+          </tr>
+        <%end %>
+      </tbody>
+    </table>
+  </div>
+  </div>

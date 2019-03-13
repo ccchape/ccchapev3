@@ -1,2 +1,31 @@
-<h1>Category#junior</h1>
-<p>Find me in app/views/category/junior.html.erb</p>
+<div class="container">
+  <header class="post-header">
+    <h1 class="post-title">Ranking da categoria Júnior</h1>
+  </header>
+
+  <div class="post-content">
+    <p>A categoria júnior reúne os principais competidores que estão no primeiro ano de sua faculdade.</p>
+
+    <div class="table-responsive">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Handle do Codeforces</th>
+          <th style="text-align: right">Rating do Codeforces</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% User.junior.each do |user| %>
+          <tr>
+            <td> <%= user.name %> </td>
+            <td> <%= user.handle %> </td>
+            <td style="text-align: right">  <%= user.rating %> </td>
+          </tr>
+        <%end %>
+      </tbody>
+    </table>
+  </div>
+  </div>

@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :inst
       t.string :telegram
       t.string :email
+      t.text :ratings
 
       t.timestamps
     end
