@@ -16,7 +16,7 @@
 
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#" title="Liga Chapecoense de Programação">
+      <a class="navbar-brand" href="<%= url_for :root %>" title="Liga Chapecoense de Programação">
         <%= image_tag "logo.png", style: "max-width: 30px;" %>
       </a>
 
@@ -26,28 +26,20 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Como participar?
-            </a>
+          <li class="nav-item <%= active?(:participar) %>">
+            <%= link_participar %>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Categoria Prodígio
-            </a>
+          <li class="nav-item <%= active?(:prodigio) %>">
+            <%= link_prodigio %>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Categoria Júnior
-            </a>
+          <li class="nav-item <%= active?(:junior) %>">
+            <%= link_junior %>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Categoria Sênior
-            </a>
+          <li class="nav-item <%= active?(:senior) %>">
+            <%= link_senior %>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li class="nav-item <%= active?(:formulario) %>">
+            <a class="nav-link" href="<%= url_for :controller => :welcome, :action => :formulario %>" >
               Formulário de Inscrição
             </a>
           </li>
