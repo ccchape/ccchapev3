@@ -21,7 +21,7 @@
         <% User.prodigio.each do |user| %>
           <tr>
             <td> <%= user.name %> </td>
-            <td> <%= user.handle %> </td>
+            <td> <%= link_to user.handle, "https://codeforces.com/profile/#{user.handle}" %> </td>
             <td style="text-align: right">  <%= user.rating %> </td>
           </tr>
         <%end %>

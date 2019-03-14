@@ -90,7 +90,7 @@ class User < ApplicationRecord
 
   def self.senior
     # User.load_all!
-    User.all
+    User.all.sort_by { |u| -u.rating }
   end
 
   def self.junior
