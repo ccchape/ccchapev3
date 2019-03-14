@@ -8,24 +8,29 @@
 
     <div class="table-responsive">
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Handle do Codeforces</th>
-          <th style="text-align: right">Rating do Codeforces</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <% User.prodigio.each do |user| %>
+    <% if @users.any? %>
+      <table class="table">
+        <thead>
           <tr>
-            <td> <%= user.name %> </td>
-            <td> <%= link_to user.handle, "https://codeforces.com/profile/#{user.handle}" %> </td>
-            <td style="text-align: right">  <%= user.rating %> </td>
+            <th>Nome</th>
+            <th>Handle do Codeforces</th>
+            <th style="text-align: right">Rating do Codeforces</th>
           </tr>
-        <%end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+
+          <% @users.each do |user| %>
+              <tr>
+                <td> <%= user.name %> </td>
+                <td> <%= link_to user.handle, "https://codeforces.com/profile/#{user.handle}" %> </td>
+                <td style="text-align: right">  <%= user.rating %> </td>
+              </tr>
+          <%end %>
+        </tbody>
+      </table>
+    <% else %>
+      <p> Entretanto, ainda não temos competidores cadastrados nessa categoria. </p>
+    <% end %>
+
   </div>
   </div>
