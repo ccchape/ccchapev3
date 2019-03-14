@@ -72,7 +72,7 @@ class User < ApplicationRecord
   def rating
     res = JSON.parse(ratings)
     if res.any?
-       res.last
+      (res.last * 0.95 ** [10 - res.size, 0].max).to_i
     else
        0
     end
