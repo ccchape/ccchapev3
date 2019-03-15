@@ -53,6 +53,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
+  gem 'capistrano-passenger'
 end
 
 group :test do
@@ -65,4 +66,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'passenger'
+gem "passenger", ">= 5.3.2", require: "phusion_passenger/rack_handler"
