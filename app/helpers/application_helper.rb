@@ -1,6 +1,5 @@
 module ApplicationHelper
   def active?(page)
-    puts "testing", page, @page
     @page == page ? "active" : ""
   end
 
