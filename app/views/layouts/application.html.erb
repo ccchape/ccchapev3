@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="<%= url_for :root %>" title="Liga Chapecoense de Programação">
         <%= image_tag "logo.png", style: "max-width: 30px;" %>
       </a>
@@ -46,12 +46,12 @@
         </div>
       </nav>
 
-      <main role="main">
+      <main role="main" style="min-height: 600px;">
         <%= yield %>
       </main>
 
       <!-- Footer -->
-      <div class="bg-light">
+      <div class="navbar-dark bg-dark text-light pt-3">
       <footer class="container small">
         <div class="row">
 
